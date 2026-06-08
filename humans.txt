@@ -1,0 +1,19 @@
+/* TEAM */
+
+Company: BetterGrowth Solutions
+Website: https://bettergrowthsolutions.com
+
+Services:
+- Credit Score Checking
+- Credit Score Repair
+- Debt Settlement
+- Home Services
+
+Contact:
+info@bettergrowthsolutions.com
+sale@bettergrowthsolutions.com
+
+/* SITE */
+
+Standards: HTML5, CSS3, JavaScript
+SEO: Sitemap.xml, Schema.org

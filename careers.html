@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers | BetterGrowth Solutions</title>
+     <!-- Favicon -->
+    <link rel="icon" href="bettergrowthsolutions.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="bettergrowthsolutions.jpg">
+    
+  <meta name="description" content="Join the BetterGrowth Solutions team. Apply for open roles in Sales, Marketing, IT & Support, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0d1f2d;
+      --ink-soft: #3a5068;
+      --muted: #6b8499;
+      --line: #e2ebe4;
+      --paper: #f8faf6;
+      --soft: #eef3ec;
+      --teal: #3d7a52;
+      --teal-light: #5a9e6f;
+      --teal-dark: #0d2a1a;
+      --navy: #0d1f2d;
+      --gold: #c9a84c;
+      --gold-soft: #f7f0dc;
+      --white: #ffffff;
+      --error: #d44c3a;
+      --shadow-sm: 0 2px 8px rgba(13,31,45,0.07);
+      --shadow: 0 16px 48px rgba(13,31,45,0.13);
+      --shadow-lg: 0 28px 72px rgba(13,31,45,0.18);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Sora', sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 0 clamp(16px, 4vw, 56px);
+      height: 68px;
+      background: rgba(248,250,246,0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .brand { display: flex; align-items: center; }
+    nav { display: flex; align-items: center; gap: clamp(12px, 2.5vw, 32px); }
+    nav a {
+      color: var(--ink-soft); font-size: 0.88rem; font-weight: 500;
+      transition: var(--transition); padding: 4px 0; position: relative;
+    }
+    nav a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--teal);
+      border-radius: 2px; transition: width 0.2s ease;
+    }
+    nav a:hover { color: var(--teal); }
+    nav a:hover::after { width: 100%; }
+    .nav-action {
+      background: var(--teal); color: white !important;
+      border-radius: var(--radius-sm); padding: 9px 18px !important;
+      font-size: 0.85rem !important; font-weight: 600 !important;
+      transition: var(--transition); flex-shrink: 0;
+    }
+    .nav-action::after { display: none !important; }
+    .nav-action:hover {
+      background: var(--teal-light); transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(61,122,82,0.3);
+    }
+    .menu-toggle {
+      display: none; background: none;
+      border: 1px solid var(--line); border-radius: var(--radius-sm);
+      width: 40px; height: 40px; cursor: pointer;
+      flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    }
+    .menu-toggle span {
+      display: block; width: 18px; height: 2px;
+      background: var(--ink); border-radius: 2px; transition: var(--transition);
+    }
+    .mobile-nav {
+      display: none; position: fixed; top: 68px; left: 0; right: 0;
+      background: var(--white); border-bottom: 1px solid var(--line);
+      padding: 16px clamp(16px, 4vw, 56px);
+      flex-direction: column; gap: 4px; z-index: 99; box-shadow: var(--shadow);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 12px 14px; border-radius: var(--radius-sm);
+      font-weight: 500; color: var(--ink-soft); transition: var(--transition);
+    }
+    .mobile-nav a:hover { background: var(--soft); color: var(--teal); }
+    .mobile-nav .nav-action {
+      background: var(--teal); color: white; padding: 13px 14px;
+      text-align: center; border-radius: var(--radius-sm); margin-top: 6px; font-weight: 600;
+    }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      padding: 14px clamp(16px, 5vw, 72px);
+      background: var(--white); border-bottom: 1px solid var(--line);
+      font-size: 0.78rem; color: var(--muted);
+    }
+    .breadcrumb a { color: var(--teal); font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, #eef4eb 0%, #f5f9f3 60%, #e8f2ea 100%);
+      padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 72px);
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); opacity: 0.4; pointer-events: none;
+    }
+    .orb-1 { width: 500px; height: 500px; top: -200px; right: -80px; background: radial-gradient(circle, rgba(61,122,82,0.22), transparent 70%); }
+    .orb-2 { width: 300px; height: 300px; bottom: -100px; left: 5%; background: radial-gradient(circle, rgba(201,168,76,0.12), transparent 70%); }
+
+    .hero-inner { position: relative; max-width: 700px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 16px;
+    }
+    .eyebrow::before {
+      content: ''; display: block; width: 20px; height: 2px;
+      background: var(--teal); border-radius: 2px;
+    }
+    .page-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--ink); margin-bottom: 18px;
+    }
+    .page-hero h1 em { font-style: italic; color: var(--teal); }
+    .hero-sub {
+      color: var(--ink-soft); font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+      line-height: 1.7; max-width: 580px;
+    }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; }
+    .meta-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 1px solid rgba(61,122,82,0.2); border-radius: 999px;
+      padding: 6px 14px; background: rgba(255,255,255,0.7);
+      color: var(--ink-soft); font-size: 0.78rem; font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+    .meta-pill svg { color: var(--teal); flex-shrink: 0; }
+
+    /* ── PERKS BAND ── */
+    .perks-band {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+    .perk-item {
+      padding: clamp(22px, 3vw, 32px) clamp(20px, 3vw, 32px);
+      position: relative; transition: var(--transition);
+    }
+    .perk-item:not(:last-child)::after {
+      content: ''; position: absolute; right: 0; top: 20%;
+      height: 60%; width: 1px; background: var(--line);
+    }
+    .perk-item:hover { background: var(--soft); }
+    .perk-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--soft); display: grid; place-items: center;
+      margin-bottom: 12px; font-size: 1.2rem;
+    }
+    .perk-item h3 { font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .perk-item p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── MAIN LAYOUT ── */
+    .page-body {
+      max-width: 1200px; margin: 0 auto;
+      padding: clamp(40px, 6vw, 72px) clamp(16px, 5vw, 72px);
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 56px; align-items: start;
+    }
+
+    /* ── LEFT: INFO ── */
+    .careers-info {}
+    .careers-info h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--ink); margin-bottom: 16px; line-height: 1.15;
+    }
+    .careers-info h2 em { font-style: italic; color: var(--teal); }
+    .careers-info > p {
+      font-size: 0.92rem; color: var(--ink-soft);
+      line-height: 1.75; margin-bottom: 28px;
+    }
+
+    /* open roles */
+    .roles-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+    .role-card {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 18px 22px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; transition: var(--transition);
+      cursor: pointer;
+    }
+    .role-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 4px 16px rgba(61,122,82,0.1);
+      transform: translateY(-1px);
+    }
+    .role-left { display: flex; align-items: center; gap: 14px; }
+    .role-icon {
+      width: 38px; height: 38px; border-radius: 9px;
+      background: var(--soft); display: grid; place-items: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .role-info h4 { font-size: 0.9rem; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+    .role-info p { font-size: 0.78rem; color: var(--muted); }
+    .role-tag {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 4px 10px;
+      border-radius: 999px; flex-shrink: 0;
+    }
+    .role-tag.open { background: rgba(61,122,82,0.1); color: var(--teal); }
+    .role-tag.remote { background: var(--gold-soft); color: #7a5c1e; }
+
+    /* contact info */
+    .contact-info-box {
+      background: var(--navy); border-radius: var(--radius);
+      padding: 28px 32px; color: rgba(214,229,216,0.8);
+    }
+    .contact-info-box h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.25rem; color: var(--white); margin-bottom: 6px;
+    }
+    .contact-info-box p { font-size: 0.84rem; line-height: 1.65; margin-bottom: 18px; }
+    .contact-email-list { display: flex; flex-direction: column; gap: 10px; }
+    .contact-email-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.84rem;
+    }
+    .contact-email-item svg { color: var(--teal-light); flex-shrink: 0; }
+    .contact-email-item a {
+      color: var(--teal-light); font-weight: 600; transition: var(--transition);
+    }
+    .contact-email-item a:hover { color: #8fd4aa; }
+    .email-label {
+      display: block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: rgba(214,229,216,0.45); margin-bottom: 1px;
+    }
+
+    /* ── RIGHT: APPLICATION FORM ── */
+    .application-form-wrap {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(24px, 3vw, 36px);
+      box-shadow: var(--shadow);
+      position: sticky; top: 88px;
+    }
+    .form-head { margin-bottom: 26px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .form-tag {
+      display: inline-block; background: var(--gold-soft); color: #7a5c1e;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 10px;
+    }
+    .form-head h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem; line-height: 1.2; color: var(--ink);
+    }
+    .form-head p { font-size: 0.82rem; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+    /* form elements */
+    .form-group { margin-bottom: 14px; }
+    .form-group.half { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    label.field-label {
+      display: block; font-size: 0.78rem; font-weight: 600;
+      color: var(--ink-soft); margin-bottom: 6px; letter-spacing: 0.01em;
+    }
+    label.field-label .req { color: var(--teal); margin-left: 2px; }
+
+    input[type="text"], input[type="email"], input[type="tel"],
+    select, textarea {
+      width: 100%; border: 1.5px solid var(--line);
+      border-radius: var(--radius-sm); padding: 0 13px;
+      color: var(--ink); background: var(--white);
+      font: inherit; font-size: 0.88rem;
+      transition: var(--transition); appearance: none;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], select { height: 44px; }
+    input::placeholder, textarea::placeholder { color: #aab8c0; }
+    input:hover, select:hover, textarea:hover { border-color: #b5cdb9; }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(61,122,82,0.12);
+    }
+    input.err, select.err, textarea.err {
+      border-color: var(--error);
+      box-shadow: 0 0 0 3px rgba(212,76,58,0.1);
+    }
+
+    textarea { height: 90px; padding: 11px 13px; resize: vertical; line-height: 1.55; }
+
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: ''; position: absolute; right: 13px; top: 50%;
+      transform: translateY(-50%);
+      border-left: 5px solid transparent; border-right: 5px solid transparent;
+      border-top: 5px solid var(--muted); pointer-events: none;
+    }
+    select { padding-right: 36px; cursor: pointer; }
+
+    /* phone with country code */
+    .phone-wrap { display: grid; grid-template-columns: 110px 1fr; gap: 8px; }
+
+    /* word counter */
+    .textarea-wrap { position: relative; }
+    .word-count {
+      position: absolute; bottom: 8px; right: 10px;
+      font-size: 0.7rem; font-weight: 600;
+      color: var(--muted); pointer-events: none;
+      background: var(--white); padding: 1px 5px; border-radius: 4px;
+    }
+    .word-count.over { color: var(--error); }
+    textarea.cover { padding-bottom: 26px; }
+
+    /* role checkboxes */
+    .roles-fieldset { border: none; margin-bottom: 14px; }
+    .roles-legend {
+      font-size: 0.78rem; font-weight: 600; color: var(--ink-soft);
+      margin-bottom: 8px; display: block;
+    }
+    .roles-legend .req { color: var(--teal); margin-left: 2px; }
+    .roles-check-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    }
+    .role-check-item { position: relative; }
+    .role-check-item input[type="checkbox"] {
+      position: absolute; opacity: 0; width: 0; height: 0;
+    }
+    .role-check-item label {
+      display: flex; align-items: center; gap: 8px;
+      height: 40px; border: 1.5px solid var(--line);
+      border-radius: var(--radius-sm); background: var(--paper);
+      font-size: 0.8rem; font-weight: 600; color: var(--ink-soft);
+      cursor: pointer; transition: var(--transition);
+      padding: 0 12px; user-select: none;
+    }
+    .role-check-item label .check-box {
+      width: 16px; height: 16px; min-width: 16px;
+      border: 2px solid var(--muted); border-radius: 4px;
+      background: var(--white); transition: var(--transition);
+      display: grid; place-items: center;
+    }
+    .role-check-item label .check-box svg { display: none; }
+    .role-check-item input:checked + label {
+      border-color: var(--teal);
+      background: rgba(61,122,82,0.07);
+      color: var(--teal);
+    }
+    .role-check-item input:checked + label .check-box {
+      background: var(--teal); border-color: var(--teal);
+    }
+    .role-check-item input:checked + label .check-box svg { display: block; }
+    .role-check-item label:hover { border-color: #b5cdb9; background: var(--soft); }
+    .role-check-item input:focus-visible + label { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+    /* consent */
+    .consent-wrap {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 13px; background: var(--soft);
+      border-radius: var(--radius-sm); margin-bottom: 14px;
+      cursor: pointer; user-select: none;
+    }
+    .consent-wrap input[type="checkbox"] {
+      appearance: none; -webkit-appearance: none;
+      width: 20px; height: 20px; min-width: 20px;
+      border: 2px solid var(--muted); border-radius: 5px;
+      margin-top: 1px; cursor: pointer; background: var(--white);
+      transition: var(--transition); position: relative; flex-shrink: 0;
+    }
+    .consent-wrap input:hover { border-color: var(--teal); }
+    .consent-wrap input:checked { background: var(--teal); border-color: var(--teal); }
+    .consent-wrap input:checked::after {
+      content: ''; position: absolute; left: 4px; top: 1px;
+      width: 7px; height: 11px; border: 2px solid white;
+      border-top: none; border-left: none; transform: rotate(45deg);
+    }
+    .consent-wrap span { font-size: 0.78rem; color: var(--ink-soft); line-height: 1.6; padding-top: 1px; }
+    .consent-wrap span a { color: var(--teal); font-weight: 600; }
+
+    /* status & submit */
+    .form-status {
+      min-height: 18px; margin-bottom: 10px;
+      font-size: 0.82rem; font-weight: 600; color: var(--error);
+    }
+    .form-status.success { color: var(--teal); }
+
+    .submit-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; height: 50px; border: none; border-radius: var(--radius-sm);
+      background: var(--teal); color: white;
+      font: inherit; font-size: 0.92rem; font-weight: 700;
+      cursor: pointer; transition: var(--transition); letter-spacing: 0.01em;
+    }
+    .submit-btn:hover {
+      background: var(--teal-light); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(61,122,82,0.35);
+    }
+    .submit-btn:active { transform: translateY(0); }
+    .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+    .btn-arrow {
+      width: 22px; height: 22px; background: rgba(255,255,255,0.2);
+      border-radius: 50%; display: grid; place-items: center;
+      font-size: 0.8rem; transition: transform 0.2s ease;
+    }
+    .submit-btn:hover .btn-arrow { transform: translateX(3px); }
+
+    /* ── SUCCESS OVERLAY ── */
+    .success-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(13,31,45,0.55); backdrop-filter: blur(6px);
+      z-index: 200; align-items: center; justify-content: center; padding: 20px;
+    }
+    .success-overlay.show { display: flex; }
+    .success-card {
+      background: var(--white); border-radius: 20px;
+      padding: clamp(32px, 5vw, 52px) clamp(28px, 5vw, 48px);
+      max-width: 460px; width: 100%; text-align: center;
+      box-shadow: var(--shadow-lg);
+      animation: popIn 0.38s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.82) translateY(24px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .success-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, #3d7a52, #5a9e6f);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 2rem;
+      box-shadow: 0 8px 28px rgba(61,122,82,0.35);
+    }
+    .success-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--ink); margin-bottom: 10px;
+    }
+    .success-card p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.65; margin-bottom: 22px; }
+    .success-close {
+      background: var(--teal); color: white; border: none;
+      border-radius: var(--radius-sm); padding: 12px 28px;
+      font: inherit; font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; transition: var(--transition);
+    }
+    .success-close:hover { background: var(--teal-light); }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--navy); color: rgba(214,229,216,0.75);
+      padding: clamp(40px, 6vw, 64px) clamp(16px, 5vw, 72px) clamp(28px, 4vw, 40px);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 40px 32px; margin-bottom: 48px;
+    }
+    .footer-tagline { font-size: 0.82rem; line-height: 1.65; margin-bottom: 16px; color: rgba(214,229,216,0.65); }
+    .footer-email a {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.82rem; font-weight: 500; color: var(--teal-light);
+      text-decoration: none; transition: var(--transition);
+    }
+    .footer-email a:hover { color: #8fd4aa; }
+    .footer-col h4 {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(214,229,216,0.5); margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a { font-size: 0.84rem; color: rgba(214,229,216,0.75); text-decoration: none; transition: var(--transition); }
+    .footer-col ul li a:hover { color: #fff; padding-left: 3px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 22px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.75rem; color: rgba(214,229,216,0.4); }
+    .footer-legal-links { display: flex; gap: 18px; }
+    .footer-legal-links a { font-size: 0.75rem; color: rgba(214,229,216,0.45); text-decoration: none; transition: var(--transition); }
+    .footer-legal-links a:hover { color: rgba(214,229,216,0.85); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1060px) {
+      .page-body { grid-template-columns: 1fr; }
+      .application-form-wrap { position: static; }
+      .perks-band { grid-template-columns: 1fr 1fr; }
+      .perk-item:nth-child(2)::after { display: none; }
+    }
+    @media (max-width: 860px) {
+      nav { display: none; }
+      .menu-toggle { display: flex; }
+      .nav-action { display: none; }
+    }
+    @media (max-width: 580px) {
+      .perks-band { grid-template-columns: 1fr; }
+      .perk-item::after { display: none !important; }
+      .roles-check-grid { grid-template-columns: 1fr; }
+      .form-group.half { grid-template-columns: 1fr; }
+      .phone-wrap { grid-template-columns: 100px 1fr; }
+    }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) both; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="BetterGrowth Solutions home">
+      <svg height="38" viewBox="0 0 180 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="8" width="22" height="22" rx="6" fill="#3d7a52"/>
+        <path d="M6 19 L11 24 L17 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="28" y="26" font-family="'DM Serif Display', serif" font-size="15" fill="#0d1f2d">BetterGrowth</text>
+        <text x="28" y="37" font-family="'Sora', sans-serif" font-size="8.5" fill="#3a5068" font-weight="600" letter-spacing="0.08em">SOLUTIONS</text>
+      </svg>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#advisers">Advisers</a>
+      <a href="index.html#support">How it works</a>
+      <a class="nav-action" href="index.html#credit-check">Check my score →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#advisers">Advisers</a>
+    <a href="index.html#support">How it works</a>
+    <a class="nav-action" href="index.html#credit-check">Check my score →</a>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>Careers</span>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="hero-inner animate-in">
+        <p class="eyebrow">Join our team</p>
+        <h1>Grow your career.<br><em>Make a difference.</em></h1>
+        <p class="hero-sub">BetterGrowth Solutions is building a team of passionate people who believe financial clarity should be accessible to everyone. If that resonates with you, we'd love to hear from you.</p>
+        <div class="meta-row">
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Open Roles Available
+          </span>
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Remote &amp; Hybrid
+          </span>
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Fast-Growing Company
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERKS BAND -->
+    <div class="perks-band" role="list" aria-label="Company benefits">
+      <div class="perk-item" role="listitem">
+        <div class="perk-icon">🌱</div>
+        <h3>Growth-First Culture</h3>
+        <p>We invest in your development with learning budgets and mentorship.</p>
+      </div>
+      <div class="perk-item" role="listitem">
+        <div class="perk-icon">🏡</div>
+        <h3>Flexible Working</h3>
+        <p>Remote and hybrid options available across most roles and departments.</p>
+      </div>
+      <div class="perk-item" role="listitem">
+        <div class="perk-icon">💚</div>
+        <h3>Health &amp; Wellbeing</h3>
+        <p>Comprehensive health coverage and wellness support for you and your family.</p>
+      </div>
+      <div class="perk-item" role="listitem">
+        <div class="perk-icon">🎯</div>
+        <h3>Mission-Driven Work</h3>
+        <p>Every role contributes to making financial clarity accessible to real people.</p>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="page-body">
+
+      <!-- LEFT: INFO + ROLES -->
+      <div class="careers-info animate-in">
+        <h2>We're looking for<br><em>people like you.</em></h2>
+        <p>Whether you're experienced in sales, passionate about marketing, skilled in tech support, or bring something entirely different to the table — if you're driven, curious, and care about the work you do, there's a place for you here.</p>
+
+        <!-- Current Openings -->
+        <p class="eyebrow" style="margin-bottom:14px;">Current openings</p>
+        <div class="roles-grid">
+          <div class="role-card" onclick="checkRole('sales')">
+            <div class="role-left">
+              <div class="role-icon">📈</div>
+              <div class="role-info">
+                <h4>Sales Representative</h4>
+                <p>Full-time · Remote</p>
+              </div>
+            </div>
+            <span class="role-tag open">Open</span>
+          </div>
+          <div class="role-card" onclick="checkRole('marketing')">
+            <div class="role-left">
+              <div class="role-icon">📣</div>
+              <div class="role-info">
+                <h4>Marketing Specialist</h4>
+                <p>Full-time · Hybrid</p>
+              </div>
+            </div>
+            <span class="role-tag open">Open</span>
+          </div>
+          <div class="role-card" onclick="checkRole('it-support')">
+            <div class="role-left">
+              <div class="role-icon">💻</div>
+              <div class="role-info">
+                <h4>IT &amp; Support Engineer</h4>
+                <p>Full-time · Remote</p>
+              </div>
+            </div>
+            <span class="role-tag open">Open</span>
+          </div>
+          <div class="role-card" onclick="checkRole('customer-success')">
+            <div class="role-left">
+              <div class="role-icon">🤝</div>
+              <div class="role-info">
+                <h4>Customer Success Manager</h4>
+                <p>Full-time · Remote</p>
+              </div>
+            </div>
+            <span class="role-tag remote">Remote</span>
+          </div>
+          <div class="role-card" onclick="checkRole('operations')">
+            <div class="role-left">
+              <div class="role-icon">⚙️</div>
+              <div class="role-info">
+                <h4>Operations Coordinator</h4>
+                <p>Part-time · Hybrid</p>
+              </div>
+            </div>
+            <span class="role-tag open">Open</span>
+          </div>
+          <div class="role-card" onclick="checkRole('other')">
+            <div class="role-left">
+              <div class="role-icon">✨</div>
+              <div class="role-info">
+                <h4>Other / General Enquiry</h4>
+                <p>Open · Any department</p>
+              </div>
+            </div>
+            <span class="role-tag remote">Enquire</span>
+          </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="contact-info-box">
+          <h3>Get in touch directly</h3>
+          <p>Have a question before applying, or want to send your CV directly? Reach out to our careers or HR team.</p>
+          <div class="contact-email-list">
+            <div class="contact-email-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              <div>
+                <span class="email-label">Careers</span>
+                <a href="mailto:career@bettergrowthsolutions.com">career@bettergrowthsolutions.com</a>
+              </div>
+            </div>
+            <div class="contact-email-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              <div>
+                <span class="email-label">HR &amp; People</span>
+                <a href="mailto:hr@bettergrowthsolutions.com">hr@bettergrowthsolutions.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: APPLICATION FORM -->
+      <div class="application-form-wrap">
+        <div class="form-head">
+          <span class="form-tag">Apply now</span>
+          <h2>Submit your application</h2>
+          <p>Fill in your details below and we'll be in touch within 5 business days.</p>
+        </div>
+
+        <form id="careerForm" novalidate>
+
+          <!-- Web3Forms access key -->
+          <input type="hidden" name="access_key" value="73b8bb3c-86ed-4e2c-a003-06aa66af7baa" />
+          <input type="hidden" name="subject" value="New Career Application — BetterGrowth Solutions" />
+          <input type="hidden" name="from_name" value="BetterGrowth Careers" />
+          <input type="hidden" name="redirect" value="false" />
+
+          <!-- Name row -->
+          <div class="form-group half">
+            <div>
+              <label class="field-label" for="firstName">First Name <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Alex" autocomplete="given-name" required />
+            </div>
+            <div>
+              <label class="field-label" for="lastName">Last Name <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Johnson" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="field-label" for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="alex@email.com" autocomplete="email" required />
+          </div>
+
+          <!-- Phone with country code -->
+          <div class="form-group">
+            <label class="field-label" for="phone">Phone Number <span class="req">*</span></label>
+            <div class="phone-wrap">
+              <div class="select-wrap">
+                <select id="countryCode" name="countryCode" aria-label="Country dial code">
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+1-CA">🇨🇦 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+64">🇳🇿 +64</option>
+                  <option value="+27">🇿🇦 +27</option>
+                  <option value="+33">🇫🇷 +33</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+39">🇮🇹 +39</option>
+                  <option value="+34">🇪🇸 +34</option>
+                  <option value="+31">🇳🇱 +31</option>
+                  <option value="+46">🇸🇪 +46</option>
+                  <option value="+47">🇳🇴 +47</option>
+                  <option value="+45">🇩🇰 +45</option>
+                  <option value="+358">🇫🇮 +358</option>
+                  <option value="+41">🇨🇭 +41</option>
+                  <option value="+43">🇦🇹 +43</option>
+                  <option value="+32">🇧🇪 +32</option>
+                  <option value="+351">🇵🇹 +351</option>
+                  <option value="+353">🇮🇪 +353</option>
+                  <option value="+48">🇵🇱 +48</option>
+                  <option value="+420">🇨🇿 +420</option>
+                  <option value="+36">🇭🇺 +36</option>
+                  <option value="+30">🇬🇷 +30</option>
+                  <option value="+90">🇹🇷 +90</option>
+                  <option value="+7">🇷🇺 +7</option>
+                  <option value="+86">🇨🇳 +86</option>
+                  <option value="+81">🇯🇵 +81</option>
+                  <option value="+82">🇰🇷 +82</option>
+                  <option value="+65">🇸🇬 +65</option>
+                  <option value="+60">🇲🇾 +60</option>
+                  <option value="+62">🇮🇩 +62</option>
+                  <option value="+63">🇵🇭 +63</option>
+                  <option value="+66">🇹🇭 +66</option>
+                  <option value="+84">🇻🇳 +84</option>
+                  <option value="+880">🇧🇩 +880</option>
+                  <option value="+92">🇵🇰 +92</option>
+                  <option value="+94">🇱🇰 +94</option>
+                  <option value="+971">🇦🇪 +971</option>
+                  <option value="+966">🇸🇦 +966</option>
+                  <option value="+974">🇶🇦 +974</option>
+                  <option value="+973">🇧🇭 +973</option>
+                  <option value="+965">🇰🇼 +965</option>
+                  <option value="+20">🇪🇬 +20</option>
+                  <option value="+234">🇳🇬 +234</option>
+                  <option value="+254">🇰🇪 +254</option>
+                  <option value="+55">🇧🇷 +55</option>
+                  <option value="+52">🇲🇽 +52</option>
+                  <option value="+54">🇦🇷 +54</option>
+                  <option value="+56">🇨🇱 +56</option>
+                  <option value="+57">🇨🇴 +57</option>
+                  <option value="+51">🇵🇪 +51</option>
+                </select>
+              </div>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel-national" required />
+            </div>
+          </div>
+
+          <!-- Country -->
+          <div class="form-group">
+            <label class="field-label" for="country">Country <span class="req">*</span></label>
+            <div class="select-wrap">
+              <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country…</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Australia</option>
+                <option>New Zealand</option>
+                <option>India</option>
+                <option>South Africa</option>
+                <option>Ireland</option>
+                <option>Germany</option>
+                <option>France</option>
+                <option>Italy</option>
+                <option>Spain</option>
+                <option>Netherlands</option>
+                <option>Sweden</option>
+                <option>Norway</option>
+                <option>Denmark</option>
+                <option>Finland</option>
+                <option>Switzerland</option>
+                <option>Austria</option>
+                <option>Belgium</option>
+                <option>Portugal</option>
+                <option>Poland</option>
+                <option>Czech Republic</option>
+                <option>Hungary</option>
+                <option>Greece</option>
+                <option>Turkey</option>
+                <option>Russia</option>
+                <option>China</option>
+                <option>Japan</option>
+                <option>South Korea</option>
+                <option>Singapore</option>
+                <option>Malaysia</option>
+                <option>Indonesia</option>
+                <option>Philippines</option>
+                <option>Thailand</option>
+                <option>Vietnam</option>
+                <option>Bangladesh</option>
+                <option>Pakistan</option>
+                <option>Sri Lanka</option>
+                <option>United Arab Emirates</option>
+                <option>Saudi Arabia</option>
+                <option>Qatar</option>
+                <option>Bahrain</option>
+                <option>Kuwait</option>
+                <option>Egypt</option>
+                <option>Nigeria</option>
+                <option>Kenya</option>
+                <option>Brazil</option>
+                <option>Mexico</option>
+                <option>Argentina</option>
+                <option>Chile</option>
+                <option>Colombia</option>
+                <option>Peru</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Role interest checkboxes -->
+          <fieldset class="roles-fieldset" id="roleFieldset">
+            <legend class="roles-legend">Role Interest <span class="req">*</span></legend>
+            <div class="roles-check-grid">
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-sales" name="roles[]" value="Sales" />
+                <label for="role-sales">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  📈 Sales
+                </label>
+              </div>
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-marketing" name="roles[]" value="Marketing" />
+                <label for="role-marketing">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  📣 Marketing
+                </label>
+              </div>
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-it" name="roles[]" value="IT & Support" />
+                <label for="role-it">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  💻 IT &amp; Support
+                </label>
+              </div>
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-cs" name="roles[]" value="Customer Success" />
+                <label for="role-cs">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  🤝 Customer Success
+                </label>
+              </div>
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-ops" name="roles[]" value="Operations" />
+                <label for="role-ops">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  ⚙️ Operations
+                </label>
+              </div>
+
+              <div class="role-check-item">
+                <input type="checkbox" id="role-other" name="roles[]" value="Other" />
+                <label for="role-other">
+                  <span class="check-box">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  </span>
+                  ✨ Other
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label class="field-label" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about yourself, your background, or why you're interested in joining BetterGrowth Solutions…"></textarea>
+          </div>
+
+          <!-- Cover Letter with word limit -->
+          <div class="form-group">
+            <label class="field-label" for="coverLetter">Cover Letter <span class="req">*</span> <span style="font-weight:400;color:var(--muted);">(max 100 words)</span></label>
+            <div class="textarea-wrap">
+              <textarea id="coverLetter" name="coverLetter" class="cover" placeholder="In up to 100 words, tell us why you're the right fit for BetterGrowth Solutions and what you'd bring to the team…" rows="5" required></textarea>
+              <span class="word-count" id="wordCount">0 / 100</span>
+            </div>
+          </div>
+
+          <!-- Consent -->
+          <label class="consent-wrap">
+            <input type="checkbox" id="consent" name="consent" required />
+            <span>I agree to BetterGrowth Solutions processing my personal data for recruitment purposes in accordance with the <a href="privacypolicy.html">Privacy Policy</a>.</span>
+          </label>
+
+          <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Submit Application
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-tagline">BetterGrowth Solutions connects people with the right credit, debt, and home-service support — simply and responsibly.</p>
+        <div class="footer-email">
+          <a href="mailto:info@bettergrowthsolutions.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            info@bettergrowthsolutions.com
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Credit Score Check</a></li>
+          <li><a href="index.html#services">Credit Repair</a></li>
+          <li><a href="index.html#services">Debt Settlement</a></li>
+          <li><a href="index.html#services">Home Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="terms&conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BetterGrowth Solutions. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacypolicy.html">Privacy</a>
+        <a href="terms&conditions.html">Terms</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SUCCESS OVERLAY -->
+  <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h2 id="successTitle">Application Received!</h2>
+      <p id="successMsg">Thank you for applying. Our team will review your application and be in touch within 5 business days.</p>
+      <button class="success-close" id="successClose" type="button">Got it — close</button>
+    </div>
+  </div>
+
+  <script>
+    // ── Mobile menu ──
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav  = document.getElementById('mobileNav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileNav.classList.remove('open')));
+
+    // ── Role card click → check relevant checkbox ──
+    const roleMap = {
+      'sales':           'role-sales',
+      'marketing':       'role-marketing',
+      'it-support':      'role-it',
+      'customer-success':'role-cs',
+      'operations':      'role-ops',
+      'other':           'role-other'
+    };
+    function checkRole(key) {
+      const id = roleMap[key];
+      if (!id) return;
+      const cb = document.getElementById(id);
+      if (cb) {
+        cb.checked = true;
+        document.getElementById('careerForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => document.getElementById('firstName').focus(), 420);
+      }
+    }
+
+    // ── Cover letter word count ──
+    const coverLetter = document.getElementById('coverLetter');
+    const wordCount   = document.getElementById('wordCount');
+    const MAX_WORDS   = 100;
+
+    function countWords(str) {
+      return str.trim() === '' ? 0 : str.trim().split(/\s+/).length;
+    }
+
+    coverLetter.addEventListener('input', () => {
+      const words = countWords(coverLetter.value);
+      wordCount.textContent = `${words} / ${MAX_WORDS}`;
+      if (words > MAX_WORDS) {
+        wordCount.classList.add('over');
+        coverLetter.classList.add('err');
+      } else {
+        wordCount.classList.remove('over');
+        coverLetter.classList.remove('err');
+      }
+    });
+
+    // ── Clear error on input ──
+    document.querySelectorAll('#careerForm input, #careerForm select, #careerForm textarea').forEach(el => {
+      el.addEventListener('input', () => {
+        el.classList.remove('err');
+        document.getElementById('formStatus').textContent = '';
+      });
+    });
+
+    // ── Helpers ──
+    const statusEl = document.getElementById('formStatus');
+    function showError(msg, field) {
+      statusEl.textContent = msg;
+      statusEl.className = 'form-status';
+      if (field) { field.classList.add('err'); field.focus(); }
+    }
+    function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+    function cleanPhone(v)   { return v.replace(/\D/g, ''); }
+
+    // ── Success overlay ──
+    const successOverlay = document.getElementById('successOverlay');
+    const successMsg     = document.getElementById('successMsg');
+    const successClose   = document.getElementById('successClose');
+
+    function showSuccess(name) {
+      successMsg.textContent = `Thank you, ${name}! Your application has been submitted successfully. Our team will review it and be in touch within 5 business days.`;
+      successOverlay.classList.add('show');
+      successClose.focus();
+    }
+
+    successClose.addEventListener('click', () => {
+      successOverlay.classList.remove('show');
+      document.getElementById('careerForm').reset();
+      wordCount.textContent = '0 / 100';
+      wordCount.classList.remove('over');
+      statusEl.textContent = '';
+    });
+    successOverlay.addEventListener('click', e => {
+      if (e.target === successOverlay) successOverlay.classList.remove('show');
+    });
+
+    // ── Form submit ──
+    document.getElementById('careerForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      statusEl.textContent = '';
+
+      const form       = e.target;
+      const firstName  = form.firstName.value.trim();
+      const lastName   = form.lastName.value.trim();
+      const email      = form.email.value.trim();
+      const phone      = cleanPhone(form.phone.value);
+      const country    = form.country.value;
+      const cover      = form.coverLetter.value.trim();
+      const coverWords = countWords(cover);
+
+      // Collect checked roles
+      const checkedRoles = [...form.querySelectorAll('input[name="roles[]"]:checked')].map(c => c.value);
+
+      // Validation
+      if (firstName.length < 2) return showError('Please enter your first name.', form.firstName);
+      if (lastName.length < 2)  return showError('Please enter your last name.', form.lastName);
+      if (!isValidEmail(email)) return showError('Please enter a valid email address.', form.email);
+      if (phone.length < 6)     return showError('Please enter a valid phone number.', form.phone);
+      if (!country)             return showError('Please select your country.', form.country);
+      if (checkedRoles.length === 0) {
+        statusEl.textContent = 'Please select at least one role you are interested in.';
+        statusEl.className = 'form-status';
+        document.getElementById('roleFieldset').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      if (cover.length < 10) return showError('Please write a brief cover letter.', form.coverLetter);
+      if (coverWords > MAX_WORDS) return showError(`Your cover letter exceeds 100 words (currently ${coverWords} words).`, form.coverLetter);
+      if (!form.consent.checked) return showError('Please accept the consent to continue.', form.consent);
+
+      const submitBtn  = document.getElementById('submitBtn');
+      const origHTML   = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting… <span class="btn-arrow">⏳</span>';
+
+      // Build FormData and append combined phone
+      const fd = new FormData(form);
+      const dialCode = form.countryCode.value;
+      fd.set('phone', `${dialCode} ${form.phone.value.trim()}`);
+      fd.set('roles', checkedRoles.join(', '));
+
+      try {
+        const res    = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+        const result = await res.json();
+        if (result.success) {
+          showSuccess(firstName);
+        } else {
+          statusEl.textContent = result.message || 'Something went wrong. Please try again.';
+          statusEl.className = 'form-status';
+        }
+      } catch {
+        statusEl.textContent = 'Network error. Please check your connection and try again.';
+        statusEl.className = 'form-status';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origHTML;
+      }
+    });
+  </script>
+  <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="jfzkMioBFuOj4-ye2dHm9";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>

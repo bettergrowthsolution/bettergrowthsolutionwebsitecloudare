@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | BetterGrowth Solutions</title>
+     <!-- Favicon -->
+    <link rel="icon" href="bettergrowthsolutions.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="bettergrowthsolutions.jpg">
+    
+  <meta name="description" content="Privacy Policy for BetterGrowth Solutions. Learn how we collect, use, and protect your personal information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0d1f2d;
+      --ink-soft: #3a5068;
+      --muted: #6b8499;
+      --line: #e2ebe4;
+      --paper: #f8faf6;
+      --soft: #eef3ec;
+      --sage: #d6e5d8;
+      --teal: #3d7a52;
+      --teal-light: #5a9e6f;
+      --teal-dark: #0d2a1a;
+      --navy: #0d1f2d;
+      --gold: #c9a84c;
+      --gold-soft: #f7f0dc;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(13,31,45,0.07);
+      --shadow: 0 16px 48px rgba(13,31,45,0.13);
+      --shadow-lg: 0 28px 72px rgba(13,31,45,0.18);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Sora', sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 clamp(16px, 4vw, 56px);
+      height: 68px;
+      background: rgba(248,250,246,0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .brand { display: flex; align-items: center; }
+    .brand-logo { height: 48px; width: auto; object-fit: contain; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(12px, 2.5vw, 32px);
+    }
+
+    nav a {
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 4px 0;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover { color: var(--teal); }
+    nav a:hover::after { width: 100%; }
+
+    .nav-action {
+      background: var(--teal);
+      color: white !important;
+      border-radius: var(--radius-sm);
+      padding: 9px 18px !important;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .nav-action::after { display: none !important; }
+    .nav-action:hover {
+      background: var(--teal-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(61,122,82,0.3);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      width: 40px; height: 40px;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      padding: 16px clamp(16px, 4vw, 56px);
+      flex-direction: column;
+      gap: 4px;
+      z-index: 99;
+      box-shadow: var(--shadow);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      color: var(--ink-soft);
+      transition: var(--transition);
+    }
+    .mobile-nav a:hover { background: var(--soft); color: var(--teal); }
+    .mobile-nav .nav-action {
+      background: var(--teal);
+      color: white;
+      padding: 13px 14px;
+      text-align: center;
+      border-radius: var(--radius-sm);
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, #eef4eb 0%, #f5f9f3 60%, #e8f2ea 100%);
+      padding: clamp(48px, 7vw, 88px) clamp(16px, 5vw, 72px);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .page-hero-orb-1 {
+      width: 500px; height: 500px;
+      top: -200px; right: -80px;
+      background: radial-gradient(circle, rgba(61,122,82,0.22), transparent 70%);
+    }
+    .page-hero-orb-2 {
+      width: 300px; height: 300px;
+      bottom: -100px; left: 5%;
+      background: radial-gradient(circle, rgba(201,168,76,0.12), transparent 70%);
+    }
+
+    .page-hero-inner {
+      position: relative;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+    }
+
+    .page-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .page-hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(61,122,82,0.2);
+      border-radius: 999px;
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.7);
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+    .meta-pill svg { color: var(--teal); flex-shrink: 0; }
+
+    /* ── CONTENT LAYOUT ── */
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 72px) clamp(16px, 5vw, 72px);
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── STICKY TOC ── */
+    .toc {
+      position: sticky;
+      top: 88px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc ul li a {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      line-height: 1.4;
+    }
+
+    .toc ul li a:hover {
+      background: var(--soft);
+      color: var(--teal);
+      padding-left: 14px;
+    }
+
+    .toc-cta {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .toc-cta p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .toc-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal);
+      transition: var(--transition);
+    }
+    .toc-cta a:hover { color: var(--teal-light); }
+
+    /* ── POLICY CONTENT ── */
+    .policy-content { min-width: 0; }
+
+    .policy-intro {
+      background: var(--soft);
+      border: 1px solid rgba(61,122,82,0.15);
+      border-left: 4px solid var(--teal);
+      border-radius: var(--radius-sm);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    .policy-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 88px;
+    }
+
+    .policy-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      min-width: 30px;
+      background: var(--teal);
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .policy-section p {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 20px 0 8px;
+    }
+
+    .policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+
+    .policy-list li::before {
+      content: '';
+      display: block;
+      width: 6px; height: 6px;
+      min-width: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      margin-top: 8px;
+    }
+
+    .policy-divider {
+      height: 1px;
+      background: var(--line);
+      margin: 40px 0;
+    }
+
+    .highlight-box {
+      background: var(--gold-soft);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      color: #5c430e;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 0 !important;
+    }
+
+    .highlight-box strong { color: #3d2c0a; }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-sm);
+      margin-top: 20px;
+    }
+
+    .contact-card p {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .contact-card a {
+      color: var(--teal);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .contact-card a:hover { color: var(--teal-light); }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--navy);
+      color: rgba(214,229,216,0.75);
+      padding: clamp(40px, 6vw, 64px) clamp(16px, 5vw, 72px) clamp(28px, 4vw, 40px);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 40px 32px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-col {}
+
+    .footer-tagline {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      color: rgba(214,229,216,0.65);
+    }
+
+    .footer-email a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--teal-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-email a:hover { color: #8fd4aa; }
+
+    .footer-col h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(214,229,216,0.5);
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.84rem;
+      color: rgba(214,229,216,0.75);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-col ul li a:hover { color: #fff; padding-left: 3px; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-bottom p { font-size: 0.75rem; color: rgba(214,229,216,0.4); }
+
+    .footer-legal-links { display: flex; gap: 18px; }
+    .footer-legal-links a {
+      font-size: 0.75rem;
+      color: rgba(214,229,216,0.45);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .footer-legal-links a:hover { color: rgba(214,229,216,0.85); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px clamp(16px, 5vw, 72px);
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb a { color: var(--teal); font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: var(--muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .toc { position: static; }
+    }
+
+    @media (max-width: 860px) {
+      nav { display: none; }
+      .menu-toggle { display: flex; }
+      .nav-action { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* scroll animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeUp 0.5s cubic-bezier(0.4,0,0.2,1) both; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="BetterGrowth Solutions home">
+      <!-- Inline logo SVG fallback — same brand mark style -->
+      <svg height="38" viewBox="0 0 180 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BetterGrowth Solutions">
+        <rect x="0" y="8" width="22" height="22" rx="6" fill="#3d7a52"/>
+        <path d="M6 19 L11 24 L17 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="28" y="26" font-family="'DM Serif Display', serif" font-size="15" fill="#0d1f2d" font-weight="400">BetterGrowth</text>
+        <text x="28" y="37" font-family="'Sora', sans-serif" font-size="8.5" fill="#3a5068" font-weight="600" letter-spacing="0.08em">SOLUTIONS</text>
+      </svg>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#advisers">Advisers</a>
+      <a href="index.html#support">How it works</a>
+      <a class="nav-action" href="index.html#credit-check">Check my score →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#advisers">Advisers</a>
+    <a href="index.html#support">How it works</a>
+    <a class="nav-action" href="index.html#credit-check">Check my score →</a>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>Privacy Policy</span>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-orb page-hero-orb-1" aria-hidden="true"></div>
+      <div class="page-hero-orb page-hero-orb-2" aria-hidden="true"></div>
+      <div class="page-hero-inner animate-in">
+        <p class="eyebrow">Legal &amp; Transparency</p>
+        <h1>Privacy <em>Policy</em></h1>
+        <p style="color:var(--ink-soft);font-size:clamp(0.92rem,1.4vw,1.05rem);line-height:1.7;max-width:600px;margin-top:14px;">
+          At BetterGrowth Solutions, your privacy matters. This policy explains exactly what data we collect, why we collect it, and how we protect it.
+        </p>
+        <div class="page-hero-meta">
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Effective Date: June 9, 2026
+          </span>
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Last Updated: June 9, 2026
+          </span>
+          <span class="meta-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            CCPA &amp; GDPR Compliant
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content-wrapper">
+
+      <!-- TABLE OF CONTENTS -->
+      <aside class="toc" aria-label="Table of contents">
+        <p class="toc-title">On this page</p>
+        <ul>
+          <li><a href="#information-we-collect">1. Information We Collect</a></li>
+          <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+          <li><a href="#sharing">3. Sharing Your Information</a></li>
+          <li><a href="#cookies">4. Cookies &amp; Tracking</a></li>
+          <li><a href="#data-security">5. Data Security</a></li>
+          <li><a href="#retention">6. Data Retention</a></li>
+          <li><a href="#your-rights">7. Your Rights &amp; Choices</a></li>
+          <li><a href="#children">8. Children's Privacy</a></li>
+          <li><a href="#third-party">9. Third-Party Links</a></li>
+          <li><a href="#changes">10. Changes to This Policy</a></li>
+          <li><a href="#contact">11. Contact Us</a></li>
+        </ul>
+        <div class="toc-cta">
+          <p>Have a privacy question?</p>
+          <a href="mailto:info@bettergrowthsolutions.com">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            Email us
+          </a>
+        </div>
+      </aside>
+
+      <!-- POLICY TEXT -->
+      <article class="policy-content">
+
+        <div class="policy-intro">
+          <strong>Welcome to BetterGrowth Solutions.</strong> This Privacy Policy describes how BetterGrowth Solutions ("we," "us," or "our") collects, uses, and shares information about you when you use our website at <strong>bettergrowthsolutions.com</strong> (the "Site") and our credit score, credit repair, debt settlement, and home services matching platform (collectively, the "Services"). By using our Services, you agree to the practices described in this Privacy Policy.
+        </div>
+
+        <!-- SECTION 1 -->
+        <section class="policy-section" id="information-we-collect">
+          <h2><span class="section-num">1</span> Information We Collect</h2>
+          <p>We collect information you provide directly to us, information we gather automatically when you use our Services, and information from third-party sources.</p>
+
+          <h3>Information You Provide</h3>
+          <ul class="policy-list">
+            <li><strong>Contact details</strong> — including your full name, email address, and phone number when you submit a request through our platform.</li>
+            <li><strong>Financial information</strong> — such as your self-reported credit score range and ZIP code, used to help match you with the right adviser.</li>
+            <li><strong>Service preferences</strong> — the type of help you're looking for (credit score check, credit repair, debt settlement, or home services).</li>
+            <li><strong>Communications</strong> — any messages or inquiries you send to us directly via email or contact forms.</li>
+            <li><strong>Consent acknowledgments</strong> — records that you agreed to our terms and consented to being contacted by matched advisers.</li>
+          </ul>
+
+          <h3>Information Collected Automatically</h3>
+          <ul class="policy-list">
+            <li><strong>Device &amp; browser data</strong> — including your browser type, operating system, and device identifiers.</li>
+            <li><strong>IP address &amp; approximate location</strong> — your IP address and derived location data (city, region, country) collected via our trusted geolocation provider.</li>
+            <li><strong>Page URL &amp; referral source</strong> — the URL you visited and how you arrived at our Site, to understand traffic and improve our Services.</li>
+            <li><strong>Usage data</strong> — pages viewed, time spent, links clicked, and form interactions to help us improve the user experience.</li>
+            <li><strong>Cookies &amp; similar technologies</strong> — see Section 4 for full details.</li>
+          </ul>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 2 -->
+        <section class="policy-section" id="how-we-use">
+          <h2><span class="section-num">2</span> How We Use Your Information</h2>
+          <p>We use the information we collect for the following purposes:</p>
+          <ul class="policy-list">
+            <li>To <strong>match you with an appropriate adviser</strong> based on your stated needs and credit profile.</li>
+            <li>To <strong>facilitate your connection</strong> with third-party adviser services such as CreditScoreIQ, YourScoreAndMore, DebtPath Relief, and HomeCare Connect.</li>
+            <li>To <strong>communicate with you</strong> about your request, follow-up information, or updates to our Services.</li>
+            <li>To <strong>process and manage submissions</strong> securely through our form processing partner (Web3Forms).</li>
+            <li>To <strong>analyse usage and improve our Site</strong>, including identifying which services are most in demand.</li>
+            <li>To <strong>prevent fraud and ensure security</strong> of our platform and users.</li>
+            <li>To <strong>comply with legal obligations</strong> and enforce our Terms &amp; Conditions.</li>
+          </ul>
+          <div class="highlight-box">
+            <p><strong>We do not sell your personal information.</strong> BetterGrowth Solutions does not and will never sell your personal data to advertisers or unrelated third parties. Our sole purpose in collecting your data is to facilitate the service matching you requested.</p>
+          </div>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 3 -->
+        <section class="policy-section" id="sharing">
+          <h2><span class="section-num">3</span> Sharing Your Information</h2>
+          <p>We share your information only in the following circumstances:</p>
+
+          <h3>Adviser Partners</h3>
+          <p>When you submit a request and are matched with an adviser, we share the information you provided (name, email, phone, ZIP, credit range, service need) with the relevant adviser partner so they can contact you. These partners have their own privacy policies which we encourage you to review.</p>
+
+          <h3>Service Providers</h3>
+          <p>We use trusted third-party service providers to help operate our platform, including:</p>
+          <ul class="policy-list">
+            <li><strong>Web3Forms</strong> — our form submission and data processing partner.</li>
+            <li><strong>ipapi.co</strong> — for IP-based geolocation data (city, region, country).</li>
+            <li><strong>Google Fonts</strong> — for web font delivery (no personal data shared).</li>
+          </ul>
+
+          <h3>Legal Requirements</h3>
+          <p>We may disclose your information if required to do so by law, or if we believe such disclosure is necessary to comply with legal obligations, protect our rights, or respond to a government request.</p>
+
+          <h3>Business Transfers</h3>
+          <p>If BetterGrowth Solutions is involved in a merger, acquisition, or asset sale, your information may be transferred. We will provide notice before such a transfer and your data becomes subject to a different privacy policy.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 4 -->
+        <section class="policy-section" id="cookies">
+          <h2><span class="section-num">4</span> Cookies &amp; Tracking Technologies</h2>
+          <p>We use cookies and similar technologies to enhance your experience and analyse Site usage. The types of cookies we use include:</p>
+          <ul class="policy-list">
+            <li><strong>Essential cookies</strong> — required for core Site functionality such as form submission and navigation.</li>
+            <li><strong>Analytics cookies</strong> — help us understand how visitors interact with our Site so we can improve it.</li>
+            <li><strong>Preference cookies</strong> — remember choices you make, such as language or layout settings.</li>
+          </ul>
+          <p>You can control cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of our Site. We do not use cookies for advertising or cross-site tracking purposes.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 5 -->
+        <section class="policy-section" id="data-security">
+          <h2><span class="section-num">5</span> Data Security</h2>
+          <p>We take reasonable technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. These measures include:</p>
+          <ul class="policy-list">
+            <li>HTTPS encryption for all data transmitted through our Site.</li>
+            <li>Secure, access-controlled form processing via our third-party submission partners.</li>
+            <li>Limiting access to personal data to staff and contractors who need it to provide the Services.</li>
+            <li>Regular review of our data handling and security practices.</li>
+          </ul>
+          <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 6 -->
+        <section class="policy-section" id="retention">
+          <h2><span class="section-num">6</span> Data Retention</h2>
+          <p>We retain your personal information for as long as necessary to fulfil the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law. Specifically:</p>
+          <ul class="policy-list">
+            <li>Submission data (name, email, phone, service need) is retained for up to <strong>24 months</strong> after your initial request unless you ask us to delete it sooner.</li>
+            <li>Automatically collected technical data (IP address, browser info) is retained for up to <strong>12 months</strong>.</li>
+            <li>Communication records are retained for up to <strong>36 months</strong> for legal and operational purposes.</li>
+          </ul>
+          <p>You may request deletion of your data at any time by contacting us — see Section 11.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 7 -->
+        <section class="policy-section" id="your-rights">
+          <h2><span class="section-num">7</span> Your Rights &amp; Choices</h2>
+          <p>Depending on where you live, you may have the following rights regarding your personal information:</p>
+          <ul class="policy-list">
+            <li><strong>Right to access</strong> — Request a copy of the personal information we hold about you.</li>
+            <li><strong>Right to correction</strong> — Ask us to correct inaccurate or incomplete information.</li>
+            <li><strong>Right to deletion</strong> — Request that we delete your personal data, subject to certain legal exceptions.</li>
+            <li><strong>Right to opt out of communications</strong> — Unsubscribe from marketing emails at any time by clicking the unsubscribe link or contacting us directly.</li>
+            <li><strong>Right to data portability</strong> — Request your data in a structured, machine-readable format (where applicable).</li>
+            <li><strong>Right to object</strong> — Object to certain types of data processing, including profiling.</li>
+          </ul>
+          <div class="highlight-box">
+            <p><strong>California Residents (CCPA):</strong> You have the right to know what personal information is collected and sold, the right to opt out of the sale of personal information (we do not sell your data), and the right not to be discriminated against for exercising your privacy rights.</p>
+          </div>
+          <p>To exercise any of these rights, please contact us using the details in Section 11. We will respond to verified requests within 30 days.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 8 -->
+        <section class="policy-section" id="children">
+          <h2><span class="section-num">8</span> Children's Privacy</h2>
+          <p>Our Services are not directed to individuals under the age of 18, and we do not knowingly collect personal information from children. If we become aware that we have inadvertently collected personal data from a child under 18, we will take steps to delete that information promptly.</p>
+          <p>If you believe we may have collected information from a child, please contact us at <a href="mailto:info@bettergrowthsolutions.com" style="color:var(--teal);font-weight:600;">info@bettergrowthsolutions.com</a>.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 9 -->
+        <section class="policy-section" id="third-party">
+          <h2><span class="section-num">9</span> Third-Party Links</h2>
+          <p>Our Site may contain links to third-party websites, including our adviser partner sites. These sites have their own privacy policies and we are not responsible for their practices. We encourage you to review the privacy policy of any third-party site you visit.</p>
+          <p>Once you leave our platform and proceed to an adviser's site, the data you provide to that adviser is governed by their own privacy policy, not ours.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 10 -->
+        <section class="policy-section" id="changes">
+          <h2><span class="section-num">10</span> Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. When we make material changes, we will update the "Effective Date" and "Last Updated" date at the top of this page.</p>
+          <p>We encourage you to review this page periodically. Your continued use of our Services after any changes to this Privacy Policy constitutes your acceptance of the updated terms.</p>
+        </section>
+
+        <div class="policy-divider"></div>
+
+        <!-- SECTION 11 -->
+        <section class="policy-section" id="contact">
+          <h2><span class="section-num">11</span> Contact Us</h2>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your personal information, please get in touch:</p>
+          <div class="contact-card">
+            <p><strong style="color:var(--ink);">BetterGrowth Solutions</strong></p>
+            <p>Email: <a href="mailto:info@bettergrowthsolutions.com">info@bettergrowthsolutions.com</a></p>
+            <p style="margin-top:12px;font-size:0.83rem;color:var(--muted);">We aim to respond to all privacy-related enquiries within 5 business days and all data subject requests within 30 days.</p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand-col">
+        <p class="footer-tagline">BetterGrowth Solutions connects people with the right credit, debt, and home-service support — simply and responsibly.</p>
+        <div class="footer-email">
+          <a href="mailto:info@bettergrowthsolutions.com">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            info@bettergrowthsolutions.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Credit Score Check</a></li>
+          <li><a href="index.html#services">Credit Repair</a></li>
+          <li><a href="index.html#services">Debt Settlement</a></li>
+          <li><a href="index.html#services">Home Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="terms&conditions.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BetterGrowth Solutions. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacypolicy.html">Privacy</a>
+        <a href="terms&conditions.html">Terms</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav  = document.getElementById('mobileNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+  </script>
+  <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="jfzkMioBFuOj4-ye2dHm9";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
